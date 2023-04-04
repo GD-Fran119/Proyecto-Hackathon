@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Proyecto Hackathon</string>
+    <string name="data_file_name">data.csv</string>
+</resources>
