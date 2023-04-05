@@ -21,6 +21,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<Button>(R.id.showAdvices)
+            .setOnClickListener {
+                //TODO
+                //Read text from file
+                val intent = Intent(this, advicesActivity::class.java)
+                startActivity(intent)
+
+            }
+
         findViewById<Button>(R.id.showStats)
             .setOnClickListener {
                 //TODO

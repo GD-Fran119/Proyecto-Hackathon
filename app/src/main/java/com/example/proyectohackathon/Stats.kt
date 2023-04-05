@@ -31,8 +31,6 @@ class Stats : AppCompatActivity() {
             Python.start(AndroidPlatform(this))
         }
 
-        //TODO
-        //Use coroutine to create chart and update UI
         GlobalScope.launch {
             withContext(Dispatchers.Default) {
                 createPlot()

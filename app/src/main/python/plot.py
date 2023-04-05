@@ -55,6 +55,6 @@ def show_interpolation_graph():
     clean(ax, fig)
 
     f = io.BytesIO()
-    plt.savefig(f, format="png", bbox_inches='tight', dpi=200)
+    plt.savefig(f, format="png", bbox_inches='tight', dpi=75)
 
     return f.getvalue()

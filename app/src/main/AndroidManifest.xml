@@ -7,6 +7,9 @@
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,11 +20,17 @@
         android:theme="@style/Theme.ProyectoHackathon"
         tools:targetApi="31">
         <activity
+            android:name=".advicesActivity"
+            android:label="ChatGPT Consejos"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Stats"
+            android:exported="false"
             android:label="Estadísticas"
             android:parentActivityName=".MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

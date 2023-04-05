@@ -28,6 +28,7 @@ android {
             pip{
                 install "matplotlib"
                 install "numpy"
+                install "openai"
             }
         }
 
