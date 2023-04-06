@@ -4,7 +4,8 @@ import openai
 
 
 def get_daily_tip():
-    openai.api_key = "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"
+    #Control api_key is valid :)
+    openai.api_key = ""
 
     conn = http.client.HTTPSConnection("opendata.aemet.es")
 

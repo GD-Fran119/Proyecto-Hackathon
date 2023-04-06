@@ -11,6 +11,7 @@
     <HorizontalScrollView
         android:layout_width="0sp"
         android:layout_height="0sp"
+        android:contentDescription="Stats chart"
         app:layout_constraintBottom_toTopOf="@id/middleGuideline"
         app:layout_constraintEnd_toStartOf="@id/rightGuideline"
         app:layout_constraintStart_toEndOf="@id/leftGuideline"
