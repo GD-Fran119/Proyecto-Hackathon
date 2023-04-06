@@ -4,29 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Stats">
+    tools:context=".Stats"
+    android:id="@+id/statslayout">
 
+
+    <HorizontalScrollView
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        app:layout_constraintBottom_toTopOf="@id/middleGuideline"
+        app:layout_constraintEnd_toStartOf="@id/rightGuideline"
+        app:layout_constraintStart_toEndOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        >
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:scaleType="centerInside"
-            android:scaleY="2"
-            android:scaleX="2"
+            />
 
-            app:layout_constraintBottom_toTopOf="@id/middleGuideline"
-            app:layout_constraintEnd_toStartOf="@id/rightGuideline"
-            app:layout_constraintStart_toEndOf="@id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@id/topGuideline"
-            app:srcCompat="@drawable/statsnotfound" />
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/imageViewPlaceholder"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:scaleType="centerInside"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:srcCompat="@drawable/statsnotfound"
+        app:layout_constraintBottom_toTopOf="@id/middleGuideline"
+        app:layout_constraintEnd_toStartOf="@id/rightGuideline"
+        app:layout_constraintStart_toEndOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        />
+
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stats not found"
+        android:text="Loading stats"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
         app:layout_constraintEnd_toStartOf="@id/rightGuideline"
@@ -72,5 +92,5 @@
         android:layout_width="wrap_content"
         android:orientation="horizontal"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.6"/>
+        app:layout_constraintGuide_percent="0.7"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

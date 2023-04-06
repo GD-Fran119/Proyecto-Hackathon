@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
@@ -32,12 +33,16 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.showStats)
             .setOnClickListener {
-                //TODO
-                //Read text from file
+
                 val intent = Intent(this, Stats::class.java)
                 startActivity(intent)
 
             }
+
+        findViewById<ImageView>(R.id.statsImage).setOnClickListener{
+            val intent = Intent(this, Stats::class.java)
+            startActivity(intent)
+        }
 
         findViewById<Button>(R.id.getData)
             .setOnClickListener {
