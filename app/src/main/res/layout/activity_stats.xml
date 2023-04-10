@@ -47,7 +47,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Loading stats"
+        android:text="Cargando estadísticas"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
         app:layout_constraintEnd_toStartOf="@id/rightGuideline"

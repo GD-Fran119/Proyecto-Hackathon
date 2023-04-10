@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:background="#CCCCCC"
                 android:text="Tiempo armosférico:"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/weatherContentTextView"/>
@@ -36,7 +37,8 @@
                 android:textSize="20sp"
                 android:text="Cargando..."
                 android:justificationMode="inter_word"
-                android:layout_marginStart="10sp"
+                android:layout_marginVertical="10sp"
+                android:paddingStart="10sp"
                 app:layout_constraintTop_toBottomOf="@id/weatherSectionTextView"
                 app:layout_constraintBottom_toTopOf="@id/advicesSectionTextView"/>
 
@@ -46,6 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:background="#CCCCCC"
                 android:text="Recomendaciones:"
                 app:layout_constraintTop_toBottomOf="@id/weatherContentTextView"
                 app:layout_constraintBottom_toTopOf="@id/advicesContentTextView"/>
@@ -55,7 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:layout_marginStart="10sp"
+                android:layout_marginVertical="10sp"
+                android:paddingStart="10sp"
                 android:text="Cargando..."
                 android:justificationMode="inter_word"
                 app:layout_constraintTop_toBottomOf="@id/advicesSectionTextView"

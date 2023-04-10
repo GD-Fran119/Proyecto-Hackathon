@@ -32,17 +32,24 @@ class advicesActivity : AppCompatActivity() {
             Python.start(AndroidPlatform(this))
         }
 
-        val preferences = getSharedPreferences("ChatGPTAdvices", MODE_PRIVATE)
-        val formatter = SimpleDateFormat("yyyy-MM-dd")
-        val currentDateString = formatter.format(Date()).toString()
 
-        if(preferences.contains("date") and preferences.getString("date", "").equals(currentDateString) ){
-            findViewById<TextView>(R.id.weatherContentTextView).text = preferences.getString("weather", "Error")
-            findViewById<TextView>(R.id.advicesContentTextView).text = preferences.getString("advice", "Error")
-        }
-        else{
-            GlobalScope.launch {
+        GlobalScope.launch {
+
+            val preferences = contexto.getSharedPreferences("ChatGPTAdvices", MODE_PRIVATE)
+            val formatter = SimpleDateFormat("yyyy-MM-dd")
+            val currentDateString = formatter.format(Date()).toString()
+
+            if(preferences.contains("date") and preferences.getString("date", "").equals(currentDateString) ){
+                withContext(Dispatchers.Main) {
+                    findViewById<TextView>(R.id.weatherContentTextView).text =
+                        preferences.getString("weather", "Error")
+                    findViewById<TextView>(R.id.advicesContentTextView).text =
+                        preferences.getString("advice", "Error")
+                }
+            }
+            else{
                 lateinit var response: Array<String>
+
                 withContext(Dispatchers.Default) {
                     val py = Python.getInstance()
                     try {
@@ -74,5 +81,6 @@ class advicesActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 }

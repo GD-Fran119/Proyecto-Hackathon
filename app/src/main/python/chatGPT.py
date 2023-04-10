@@ -36,7 +36,7 @@ def get_daily_tip():
     completion = openai.Completion.create(engine="text-davinci-003",
                                           prompt=prompt,
                                           max_tokens=1000)
-    return [" ".join(texto.split()), " ".join(completion.choices[0].text.split())].copy()
+    return [" ".join(texto.split()), completion.choices[0].text[2::]].copy()
 
 if __name__ == "__main__":
     res = get_daily_tip()
